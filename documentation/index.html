@@ -52,48 +52,46 @@
     <h1 class="page-title">Documentation</h1>
   </header>
   <article class="page-content">
-    <h1 id="usage">Usage</h1>
+    <h2 id="introduction">Introduction</h2>
+
+<p>We’re scratching our own itch here. As developers, we spend a lot of time reading documentation, and it isn’t always easy to find the information we need.</p>
+
+<p>Not blaming anyone here. Building a good search for a documentation is a complex challenge. We happen to have a lot of experience doing that, and we want to share it with the world. For free.</p>
+
+<p>Just submit the form on the <a href="https://community.algolia.com/docsearch/">community.algolia.com/docsearch/</a> website and we’ll get back to you with what you need to integrate your new search into your website.</p>
+
+<ol>
+  <li>We’ll crawl your documentation pages,</li>
+  <li>We’ll configure your search experience,</li>
+  <li>and you’ll need to add the a small JS/CSS code snippet to your website.</li>
+</ol>
+
+<h2 id="setup">Setup</h2>
+
+<p>Once we’ve crawled your documentation website we’ll send you the credentials you need to add the following code snippet to your website:</p>
 
 <div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;link</span> <span style="color:#b48">rel</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">stylesheet</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/0/docsearch.min.css</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
-<span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/0/docsearch.min.js</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/0/docsearch.min.js</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
+<span style="background-color:hsla(0,0%,0%,0.07);color:black">docSearch({
+  <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">indexName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;INDEX_NAME&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">inputSelector</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;YOUR_INPUT_DOM_SELECTOR&gt;</span><span style="color:#710">'</span></span>
+});</span>
+<span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
 </pre></div>
 </div>
 </div>
 
-<div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre>documentationSearch({
-  <span style="color:#606">apiKey</span>: apiKey, <span style="color:#777">// Mandatory</span>
-  <span style="color:#606">indexName</span>: indexName, <span style="color:#777">// Mandatory</span>
-  <span style="color:#606">inputSelector</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">#search-input</span><span style="color:#710">'</span></span> <span style="color:#777">// Mandatory</span>
-});
-</pre></div>
-</div>
-</div>
+<h2 id="customization">Customization</h2>
 
-<h1 id="examples">Examples</h1>
+<p>To customize the look &amp; feel of the dropdown menu, you can either:</p>
 
 <ul>
-  <li>http://eslint.org/</li>
-  <li>https://bootstrap.algolia.com/</li>
-  <li>https://reactjs.algolia.com/</li>
-  <li>https://babeljs.algolia.com/</li>
+  <li>edit the color <a href="https://github.com/algolia/docsearch/blob/master/src/styles/_variables.scss">variables</a> and rebuild this project CSS,</li>
+  <li>or override the colors like we did in <a href="https://github.com/algolia/docsearch/blob/master/dev/docsearch-styling.css">dev/docsearch-styling.css</a>.</li>
 </ul>
-
-<h1 id="how-do-i-get-an-apikey-and-indexname">How do I get an <code>apiKey</code> and <code>indexName</code>?</h1>
-
-<p>Send us <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#111;&#099;&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#097;&#108;&#103;&#111;&#108;&#105;&#097;&#046;&#099;&#111;&#109;">an email</a> with the url of
-the documentation website you would like to add search to.</p>
-
-<h1 id="how-does-it-work">How does it work?</h1>
-
-<p>The JavaScript library is a wrapper on top of our
-<a href="https://github.com/algolia/autocomplete.js">autocomplete.js</a> library, along
-with default CSS styling of the dropdown.</p>
-
-<p>The indexing of the website data itself is currently done by an internal tool (to be released).</p>
-
-<p>Indexing of websites using docsearch takes places every day.</p>
 
 
   </article>
