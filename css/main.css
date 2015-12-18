@@ -3863,19 +3863,6 @@ header.site-header nav.navbar .navbar-nav > li > a.navbar-github-link:hover {
   #join-form label {
     display: block;
     font-weight: normal; }
-  #join-form input {
-    width: 100%;
-    margin: 0 0 10px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    color: #091724;
-    outline: none; }
-    #join-form input#form-submit {
-      background: transparent;
-      border: 3px solid #46AEDA;
-      color: #FF2E6C;
-      font-size: 16px;
-      font-weight: bold; }
   #join-form p {
     font-size: 13px;
     color: #C7C4C4;
@@ -4006,6 +3993,12 @@ footer.site-footer .input-group-addon {
 .page-content {
   font-size: 1.1em;
   line-height: 1.5em; }
+
+code {
+  color: #FF2E6C; }
+
+.CodeRay .code pre * {
+  background: transparent !important; }
 
 footer.site-footer {
   padding-top: 2em;

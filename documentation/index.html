@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Documentation Search</title>
+    <title>Documentation - Documentation Search</title>
     <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quod hic qui, possimus ab ratione illo reiciendis nostrum sit aperiam debitis enim illum sequi reprehenderit porro error, sint earum rem!">
 
     <link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Raleway:300,800" />
@@ -29,7 +29,7 @@
         <ul class="nav navbar-nav navbar-right">
           
           
-            <li >
+            <li class="active">
               <a href="/docsearch/documentation/" title="">Documentation</a>
             </li>
           
@@ -47,162 +47,56 @@
 </header>
 
 
-    <div class='main-content'>
-  <div class='jumbotron'>
-    <div class='container pos-rel'>
-      <div class='jumbotron-header'>
-        <h1 class='jumbotron-title'>
-          <span class='blue'><span class='big'>D</span>OC
-          </span>
-          <span class='big'>S</span>EARCH
-        </h1>
-        <p>The easiest way to add search to your documentation.</p>
-      </div>
-      <div class='jumbotron-left-column'>
-        <p>We’ve created the fastest, easiest way to search within documentation.</p>
-        <p>And best of all? It’s free!</p>
-      </div>
-      <form action='#' id='join-form' method='POST'>
-        <h3>Want to try it out?</h3>
-        <div class='row'>
-          <div class='col-sm-10 col-sm-offset-1'>
-            <div class='spacer20'></div>
-            <div class='input-group'>
-              <span class='input-group-addon'>
-                <i class='fa fa-fw fa-envelope-o'></i>
-              </span>
-              <input class='form-control' name='email' placeholder='you@example.org' type='email'>
-            </div>
-            <div class='text-sm'>We'll crawl the documentation pages of your website and index them using Algolia.</div>
-            <div class='spacer20'></div>
-            <div class='input-group'>
-              <span class='input-group-addon'>
-                <i class='fa fa-fw fa-globe'></i>
-              </span>
-              <input class='form-control' name='url' placeholder='https://website.com/doc' type='text'>
-            </div>
-            <div class='text-sm'>We'll send you the code you need to improve the search of your documentation.</div>
-            <div class='spacer20'></div>
-            <p class='text-center'>
-              <button class='btn btn-primary' type='submit'>
-                Join the DocSearch beta
-                <i class='fa fa-chevron-right'></i>
-              </button>
-            </p>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class='page-section' id='section_why'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-10 col-sm-offset-1'>
-          <h2 class='page-section-title'>Why DocSearch?</h2>
-          <p>We’re scratching our own itch here. As developers, we spend a lot of time reading documentation, and it isn’t always easy to find the information we need.</p>
-          <p>Not blaming anyone here. Building a good search for a documentation is a complex challenge. We happen to have a lot of experience doing that, and we want to share it   with the world. For free.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class='page-section page-section-dark' id='section_examples'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-10 col-sm-offset-1'>
-          <h2 class='page-section-title'>DocSearch is live</h2>
-          <p>
-            We’ve integrated DocSearch into several open source projects.
-            <br>Take a look.</br>
-          </p>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-sm-4 showcase'>
-          <a href='//bootstrap.algolia.com' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-bootstrap.png'>
-              <img class='img-responsive example' src='./img/showcase/example-bootstrap.gif'>
-                Bootstrap
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='//eslint.org/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-eslint.png'>
-              <img class='img-responsive example' src='./img/showcase/example-eslint.gif'>
-                ESLint
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='//docs.scala-lang.org/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-scala.png'>
-              <img class='img-responsive example' src='./img/showcase/example-scala.gif'>
-                Scala
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='//babeljs.algolia.com/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-babel.png'>
-              <img class='img-responsive example' src='./img/showcase/example-babel.gif'>
-                Babel.js
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='//reactjs.algolia.com/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-react.png'>
-              <img class='img-responsive example' src='./img/showcase/example-react.gif'>
-                React.js
-              </img>
-            </img>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class='page-section' id='section_how'>
-    <div class='container'>
-      <div class='row'>
-        <h2 class='page-section-title'>How it works</h2>
-      </div>
-      <div class='row'>
-        <div class='col-sm-4 how-it-works'>
-          <h3><span class='how-it-works-number'>1</span>We crawl your documentation pages
-          </h3>
-          <p>We built a website crawler designed to index every section of your documentation.</p>
-          <p>Just send us the URL of your documentation, and we’ll periodically run the crawler so you’re always up-to-date.</p>
-        </div>
-        <div class='col-sm-4 how-it-works'>
-          <h3><span class='how-it-works-number'>2</span>We configure your search experience
-          </h3>
-          <p>You don’t need to configure any settings or even have an Algolia account.</p>
-          <p>We take of all of this automatically to ensure the best documentation search experience.</p>
-        </div>
-        <div class='col-sm-4 how-it-works'>
-          <h3><span class='how-it-works-number'>3</span>You add the autocomplete script to your UI
-          </h3>
-          <p>We’ll send you the script so you can integrate Algolia autocomplete to power your search.</p>
-          <p>You will receive the same speed, relevance and best-in-class UX as our paying customers.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class='page-section page-section-dark' id='section_get-started'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-10 col-sm-offset-1'>
-          <h2 class='page-section-title'>Get started</h2>
-          <p>Add the url of your documentation site and your email to the form at the top of the page. We’ll get back to you with what you need to integrate your new search into   your website.</p>
-          <p>Don’t forget, DocSearch is completely free! There’s no need to sign up for Algolia or submit any payment information. Let’s tackle document search together.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="container main-content">
+  <header class="page-header">
+    <h1 class="page-title">Documentation</h1>
+  </header>
+  <article class="page-content">
+    <h1 id="usage">Usage</h1>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;link</span> <span style="color:#b48">rel</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">stylesheet</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/0/docsearch.min.css</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/0/docsearch.min.js</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
+</pre></div>
+</div>
+</div>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre>documentationSearch({
+  <span style="color:#606">apiKey</span>: apiKey, <span style="color:#777">// Mandatory</span>
+  <span style="color:#606">indexName</span>: indexName, <span style="color:#777">// Mandatory</span>
+  <span style="color:#606">inputSelector</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">#search-input</span><span style="color:#710">'</span></span> <span style="color:#777">// Mandatory</span>
+});
+</pre></div>
+</div>
+</div>
+
+<h1 id="examples">Examples</h1>
+
+<ul>
+  <li>http://eslint.org/</li>
+  <li>https://bootstrap.algolia.com/</li>
+  <li>https://reactjs.algolia.com/</li>
+  <li>https://babeljs.algolia.com/</li>
+</ul>
+
+<h1 id="how-do-i-get-an-apikey-and-indexname">How do I get an <code>apiKey</code> and <code>indexName</code>?</h1>
+
+<p>Send us <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#111;&#099;&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#097;&#108;&#103;&#111;&#108;&#105;&#097;&#046;&#099;&#111;&#109;">an email</a> with the url of
+the documentation website you would like to add search to.</p>
+
+<h1 id="how-does-it-work">How does it work?</h1>
+
+<p>The JavaScript library is a wrapper on top of our
+<a href="https://github.com/algolia/autocomplete.js">autocomplete.js</a> library, along
+with default CSS styling of the dropdown.</p>
+
+<p>The indexing of the website data itself is currently done by an internal tool (to be released).</p>
+
+<p>Indexing of websites using docsearch takes places every day.</p>
+
+
+  </article>
 </div>
 
 
@@ -312,7 +206,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-  <script src="/docsearch/js/home.js"></script>
+  
 
   </body>
 
