@@ -3703,13 +3703,14 @@ html, body {
   .site-header .navbar {
     border-radius: 0;
     border: none;
-    background-color: #0B1724; }
+    background-color: #0B1724;
+    height: 50px; }
     .site-header .navbar .navbar-header {
       position: relative;
       height: 50px;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 50px;
-      color: white; }
+      color: #C7C4C3; }
       .site-header .navbar .navbar-header a:hover {
         text-decoration: none; }
     .site-header .navbar .navbar-nav > li {
