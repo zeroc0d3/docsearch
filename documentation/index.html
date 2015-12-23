@@ -17,7 +17,7 @@
   <body>
     
 <header class="site-header">
-  <nav class="navbar navbar-default  navbar-inverse">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <a id="logo" href="/docsearch/">
@@ -74,7 +74,7 @@
   <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;link</span> <span style="color:#b48">rel</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">stylesheet</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/0/docsearch.min.css</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
 <span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/0/docsearch.min.js</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
 <span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
-<span style="background-color:hsla(0,0%,0%,0.07);color:black">docSearch({
+<span style="background-color:hsla(0,0%,0%,0.07);color:black">docsearch({
   <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
   <span style="color:#606">indexName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;INDEX_NAME&gt;</span><span style="color:#710">'</span></span>,
   <span style="color:#606">inputSelector</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;YOUR_INPUT_DOM_SELECTOR&gt;</span><span style="color:#710">'</span></span>
@@ -86,12 +86,57 @@
 
 <h2 id="customization">Customization</h2>
 
-<p>To customize the look &amp; feel of the dropdown menu, you can either:</p>
+<p>The default colorscheme is blue and gray:</p>
 
-<ul>
-  <li>edit the color <a href="https://github.com/algolia/docsearch/blob/master/src/styles/_variables.scss">variables</a> and rebuild this project CSS (<code>npm run build:css</code>),</li>
-  <li>or override the colors like we did in <a href="https://github.com/algolia/docsearch/blob/master/dev/docsearch-styling.css">dev/docsearch-styling.css</a>.</li>
-</ul>
+<p><img src="https://community.algolia.com/docsearch/img/default-colorscheme.png" alt="Default colorscheme" /></p>
+
+<p>To update the colors to suit your website, you just need to override a few
+colors. Here is an example of a CSS file that you can use as a basis and that
+sets white and purples colors.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span style="color:#777">/* Bottom border of each suggestion */</span>
+<span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion</span> {
+  <span style="color:#606">border-bottom-color</span>: <span style="color:#0A0">#3A3DD1</span>;
+}
+<span style="color:#777">/* Main category headers */</span>
+<span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion--category-header</span> {
+  <span style="color:#606">background-color</span>: <span style="color:#0A0">#4B54DE</span>;
+}
+<span style="color:#777">/* Highlighted search terms */</span>
+<span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion--highlight</span> {
+  <span style="color:#606">color</span>: <span style="color:#0A0">#3A33D1</span>;
+}
+<span style="color:#777">/* Highligted search terms in the main category headers */</span>
+<span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion--category-header</span> <span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion--highlight</span>  {
+  <span style="color:#606">background-color</span>: <span style="color:#0A0">#4D47D5</span>;
+}
+<span style="color:#777">/* Currently selected suggestion */</span>
+<span style="color:#B06;font-weight:bold">.aa-cursor</span> <span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion--content</span> {
+  <span style="color:#606">color</span>: <span style="color:#0A0">#272296</span>;
+}
+<span style="color:#B06;font-weight:bold">.aa-cursor</span> <span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion</span> {
+  <span style="color:#606">background</span>: <span style="color:#0A0">#EBEBFB</span>;
+}
+
+<span style="color:#777">/* For bigger screens, when displaying results in two columns */</span>
+<span style="color:#088;font-weight:bold">@media</span> (<span style="color:#339;font-weight:bold">min-width</span>: <span style="color:#60E">768px</span>) {
+  <span style="color:#777">/* Bottom border of each suggestion */</span>
+  <span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion</span> {
+    <span style="color:#606">border-bottom-color</span>: <span style="color:#0A0">#7671df</span>;
+  }
+  <span style="color:#777">/* Left column, with secondary category header */</span>
+  <span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion--subcategory-column</span> {
+    <span style="color:#606">border-right-color</span>: <span style="color:#0A0">#7671df</span>;
+    <span style="color:#606">background-color</span>: <span style="color:#0A0">#F2F2FF</span>;
+    <span style="color:#606">color</span>: <span style="color:#0A0">#4E4726</span>;
+  }
+}
+</pre></div>
+</div>
+</div>
+
+<p>Advanced users can also clone the repository, edit the <a href="https://github.com/algolia/docsearch/blob/master/src/styles/_variables.scss">_variables.scss</a> file and re-build the CSS file using <code>npm run build:css</code>.</p>
 
 
   </article>
@@ -99,8 +144,7 @@
 
 
 
-    <div class="spacer100 bg-white"></div>
-<footer class="site-footer">
+    <footer class="site-footer">
   <p>
     Designed and built with <i class="fa fa-heart"></i> by <a href="https://www.algolia.com/?utm_medium=social-owned&utm_source=documentation+search&utm_campaign=homepage"><img src="/docsearch/img/logo-algolia-dark.png" alt="Algolia" height="20"></a>
   </p>
@@ -137,8 +181,6 @@
 
     <script src="//cdn.jsdelivr.net/jquery/2.1/jquery.min.js"></script>
     <script src="/docsearch/js/bootstrap.min.js"></script>
-    <script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 
 
 

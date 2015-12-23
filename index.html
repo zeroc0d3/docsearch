@@ -17,7 +17,7 @@
   <body>
     
 <header class="site-header">
-  <nav class="navbar navbar-default  navbar-inverse">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <a id="logo" href="/docsearch/">
@@ -47,171 +47,204 @@
 </header>
 
 
-    <div class='main-content'>
-  <div class='jumbotron'>
-    <div class='container pos-rel'>
-      <div class='jumbotron-header'>
-        <h1 class='jumbotron-title'>
-          <span class='blue'><span class='big'>D</span>OC
-          </span>
-          <span class='big'>S</span>EARCH
-        </h1>
-        <p id='top'>The easiest way to add search to your documentation.</p>
+    <div class='jumbotron'>
+  <div class='container pos-rel'>
+    <div class='jumbotron-header'>
+      <h1 class='jumbotron-title'>
+        <img class='logo' src='./img/logo-docsearch.svg'>
+      </h1>
+      <p id='top'>The easiest way to add search to your documentation.</p>
+    </div>
+    <div class='jumbotron-left-column'>
+      <div class='index-container'>
+        <img class='index' src='./img/illus-index.svg'>
+        <div class='ripple'></div>
       </div>
-      <div class='jumbotron-left-column'>
+      <div class='spacer30'></div>
+      <div class='text-center'>
         <p>We’ve created the fastest, easiest way to search within documentation.</p>
-        <p>And best of all? It’s free!</p>
-      </div>
-      <form action='#' id='join-form' method='POST'>
-        <h3>Want to try it out?</h3>
-        <div class='spacer20'></div>
-        <div class='input-group'>
-          <span class='input-group-addon'>
-            <i class='fa fa-fw fa-envelope-o'></i>
-          </span>
-          <input class='form-control' name='email' placeholder='you@example.org' type='email'>
-        </div>
-        <p class='text-sm'>We'll crawl the documentation pages of your website and index them using Algolia.</p>
-        <div class='spacer20'></div>
-        <div class='input-group'>
-          <span class='input-group-addon'>
-            <i class='fa fa-fw fa-globe'></i>
-          </span>
-          <input class='form-control' name='url' placeholder='https://website.com/doc' type='text'>
-        </div>
-        <p class='text-sm'>We'll send you the code you need to improve the search of your documentation.</p>
-        <div class='spacer20'></div>
-        <div class='text-center'>
-          <button class='btn btn-primary btn-lg' type='submit'>
-            Help me improve my search
-            <i class='fa fa-heart'></i>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class='page-section' id='section_why'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-10 col-sm-offset-1'>
-          <h2 class='page-section-title'>Why DocSearch?</h2>
-          <p>We’re scratching our own itch here. As developers, we spend a lot of time reading documentation, and it isn’t always easy to find the information we need.</p>
-          <p>Not blaming anyone here. Building a good search for a documentation is a complex challenge. We happen to have a lot of experience doing that, and we want to share it   with the world. For free.</p>
-        </div>
+        <p>  And best of all? It’s FREE.</p>
       </div>
     </div>
+    <form action='#' class='join-form' method='POST'>
+      <h3>Get Started. It’s FREE!</h3>
+      <div class='spacer20'></div>
+      <div class='input-group'>
+        <span class='input-group-addon'>
+          <i class='fa fa-fw fa-envelope-o'></i>
+        </span>
+        <input class='form-control' name='email' placeholder='you@example.org' type='email'>
+      </div>
+      <p class='text-sm'>We’ll crawl the documentation pages of your website and index them on Algolia.</p>
+      <div class='spacer20'></div>
+      <div class='input-group'>
+        <span class='input-group-addon'>
+          <i class='fa fa-fw fa-globe'></i>
+        </span>
+        <input class='form-control' name='url' placeholder='https://website.com/doc' type='text'>
+      </div>
+      <p class='text-sm'>We’ll email you the code you need to integrate the search into your documentation.</p>
+      <div class='spacer20'></div>
+      <div class='text-center'>
+        <button class='btn btn-primary btn-lg' type='submit'>
+          JOIN THE BETA!
+        </button>
+      </div>
+    </form>
   </div>
-  <div class='page-section page-section-dark' id='section_examples'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-10 col-sm-offset-1'>
-          <h2 class='page-section-title'>DocSearch is live</h2>
-          <p>
-            We’ve integrated DocSearch into several open source projects.
-            <br>Take a look.</br>
-          </p>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-sm-4 showcase'>
-          <a href='https://bootstrap.algolia.com' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-bootstrap.png'>
-              <img class='img-responsive example' src='./img/showcase/example-bootstrap.gif'>
-                Bootstrap
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='http://eslint.org/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-eslint.png'>
-              <img class='img-responsive example' src='./img/showcase/example-eslint.gif'>
-                ESLint
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='http://docs.scala-lang.org/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-scala.png'>
-              <img class='img-responsive example' src='./img/showcase/example-scala.gif'>
-                Scala
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='https://babeljs.algolia.com/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-babel.png'>
-              <img class='img-responsive example' src='./img/showcase/example-babel.gif'>
-                Babel.js
-              </img>
-            </img>
-          </a>
-        </div>
-        <div class='col-sm-4 showcase'>
-          <a href='https://reactjs.algolia.com/' target='_blank'>
-            <img class='img-responsive logo' src='./img/showcase/logo-react.png'>
-              <img class='img-responsive example' src='./img/showcase/example-react.gif'>
-                React
-              </img>
-            </img>
-          </a>
-        </div>
-      </div>
+</div>
+<div class='page-section' id='section_why'>
+  <div class='m800 m-l-r-auto'>
+    <h2 class='page-section-title'>Why DocSearch?</h2>
+    <p>We're kind of scratching our own itch here. As developers, we spend a lot of time reading documentation, and it isn’t always easy to find the information we need.</p>
+    <p>No one's to blame, building a good search for a documentation is a complex challenge.  We just happen to have a lot of experience doing that, and we want to share it with the world.</p>
+  </div>
+</div>
+<div class='page-section dark' id='section_examples'>
+  <div class='container'>
+    <div class='text-center'>
+      <h2 class='page-section-title'>DocSearch is live</h2>
+      <p>We’ve integrated DocSearch into several open source projects. Take a look.</p>
     </div>
-  </div>
-  <div class='page-section' id='section_how'>
-    <div class='container'>
-      <div class='row'>
-        <h2 class='page-section-title'>How it works</h2>
+    <div class='row'>
+      <div class='col-sm-4 showcase'>
+        <a href='https://bootstrap.algolia.com' target='_blank'>
+          <img class='img-responsive logo' src='./img/showcase/logo-bootstrap.png'>
+          <div class='screen-wrapper'>
+            <img class='img-responsive example freezeframe' src='./img/showcase/example-bootstrap.gif'>
+            <img class='img-responsive screen-mask' src='./img/mask.png'>
+          </div>
+          <div class='spacer5'></div>
+          Bootstrap
+        </a>
       </div>
-      <div class='row'>
-        <div class='col-sm-4 how-it-works'>
-          <h3><span class='how-it-works-number'>1</span>We crawl your documentation pages
-          </h3>
-          <p>We built a website crawler designed to index every section of your documentation.</p>
-          <p>Just send us the URL of your documentation, and we’ll periodically run the crawler so you’re always up-to-date.</p>
-        </div>
-        <div class='col-sm-4 how-it-works'>
-          <h3><span class='how-it-works-number'>2</span>We configure your search experience
-          </h3>
-          <p>You don’t need to configure any settings or even have an Algolia account.</p>
-          <p>We take of all of this automatically to ensure the best documentation search experience.</p>
-        </div>
-        <div class='col-sm-4 how-it-works'>
-          <h3><span class='how-it-works-number'>3</span>You add the JS/CSS snippets to your website
-          </h3>
-          <p>We’ll send you a few lines to code to integrate Algolia autocomplete and power your search.</p>
-          <p>You will receive the same speed, relevance and best-in-class UX as our paying customers.</p>
-        </div>
+      <div class='col-sm-4 showcase'>
+        <a href='http://eslint.org/' target='_blank'>
+          <img class='img-responsive logo' src='./img/showcase/logo-eslint.png'>
+          <div class='screen-wrapper'>
+            <img class='img-responsive example freezeframe' src='./img/showcase/example-eslint.gif'>
+            <img class='img-responsive screen-mask' src='./img/mask.png'>
+          </div>
+          <div class='spacer5'></div>
+          ESLint
+        </a>
+      </div>
+      <div class='col-sm-4 showcase'>
+        <a href='http://docs.scala-lang.org/' target='_blank'>
+          <img class='img-responsive logo' src='./img/showcase/logo-scala.png'>
+          <div class='screen-wrapper'>
+            <img class='img-responsive example freezeframe' src='./img/showcase/example-scala.gif'>
+            <img class='img-responsive screen-mask' src='./img/mask.png'>
+          </div>
+          <div class='spacer5'></div>
+          Scala
+        </a>
+      </div>
+      <div class='col-sm-4 showcase'>
+        <a href='https://babeljs.algolia.com/' target='_blank'>
+          <img class='img-responsive logo' src='./img/showcase/logo-babel.png'>
+          <div class='screen-wrapper'>
+            <img class='img-responsive example freezeframe' src='./img/showcase/example-babel.gif'>
+            <img class='img-responsive screen-mask' src='./img/mask.png'>
+          </div>
+          <div class='spacer5'></div>
+          Babel.js
+        </a>
+      </div>
+      <div class='col-sm-4 showcase'>
+        <a href='https://reactjs.algolia.com/' target='_blank'>
+          <img class='img-responsive logo' src='./img/showcase/logo-react.png'>
+          <div class='screen-wrapper'>
+            <img class='img-responsive example freezeframe' src='./img/showcase/example-react.gif'>
+            <img class='img-responsive screen-mask' src='./img/mask.png'>
+          </div>
+          <div class='spacer5'></div>
+          React
+        </a>
+      </div>
+      <div class='col-sm-4 showcase'>
+        <div class='placeholder-logo'></div>
+        <div class='placeholder-screen'></div>
+        <div class='spacer5'></div>
+        You?
       </div>
     </div>
   </div>
-  <div class='page-section page-section-dark' id='section_get-started'>
-    <div class='container'>
-      <div class='row'>
-        <div class='col-sm-10 col-sm-offset-1'>
-          <h2 class='page-section-title'>Get started</h2>
-          <p>Add the url of your documentation site and your email to the form at the top of the page. We’ll get back to you with what you need to integrate your new search into   your website.</p>
-          <p>Don’t forget, DocSearch is completely free! There’s no need to sign up for Algolia or submit any payment information. Let’s tackle document search together.</p>
-          <div class='spacer30'></div>
-          <p class='text-center'>
-            <a class='btn btn-primary btn-lg' href='#top'>
-              Help me improve my search
-              <i class='fa fa-heart'></i>
-            </a>
-          </p>
+</div>
+<div class='page-section' id='section_how'>
+  <div class='container'>
+    <div class='row'>
+      <h2 class='page-section-title'>How it works</h2>
+    </div>
+    <div class='row'>
+      <div class='col-sm-12'>
+        <img class='img-responsive' src='./img/illus-howitworks.jpg'>
+      </div>
+    </div>
+    <div class='spacer60'></div>
+    <div class='row'>
+      <div class='col-sm-10 col-sm-offset-1'>
+        <div class='row'>
+          <div class='col-sm-4 how-it-works'>
+            <h3><span class='how-it-works-number'>1</span>We crawl your documentation pages
+            </h3>
+            <p>We built a website crawler designed to index every section of your documentation.</p>
+            <p>Just send us the URL of your documentation, and we’ll periodically run the crawler so you’re always up-to-date.</p>
+          </div>
+          <div class='col-sm-4 how-it-works'>
+            <h3><span class='how-it-works-number'>2</span>We configure your search experience
+            </h3>
+            <p>You don’t need to configure any settings or even have an Algolia account.</p>
+            <p>We take of all of this automatically to ensure the best documentation search experience.</p>
+          </div>
+          <div class='col-sm-4 how-it-works'>
+            <h3><span class='how-it-works-number'>3</span>You add the search autocomplete to your UI
+            </h3>
+            <p>We’ll send you a few lines to code to integrate Algolia autocomplete and power your search.</p>
+            <p>You will receive the same speed, relevance and best-in-class UX as our paying customers.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class='page-section dark' id='section_get-started'>
+  <div class='container'>
+    <h2 class='page-section-title'>Get started</h2>
+    <div class='text-center'>
+      <p>We’ll get back to you within a few hours with everything you need to integrate your new search into your website.</p>
+      <p>Oh, and did we mention it's FREE? No commitment. No subscription. Everything is on us!</p>
+    </div>
+    <div class='spacer30'></div>
+    <form action='#' class='join-form' method='POST'>
+      <div class='input-group'>
+        <span class='input-group-addon'>
+          <i class='fa fa-fw fa-envelope-o'></i>
+        </span>
+        <input class='form-control' name='email' placeholder='you@example.org' type='email'>
+      </div>
+      <p class='text-sm'>We’ll crawl the documentation pages of your website and index them on Algolia.</p>
+      <div class='spacer20'></div>
+      <div class='input-group'>
+        <span class='input-group-addon'>
+          <i class='fa fa-fw fa-globe'></i>
+        </span>
+        <input class='form-control' name='url' placeholder='https://website.com/doc' type='text'>
+      </div>
+      <p class='text-sm'>We’ll email you the code you need to integrate the search into your documentation.</p>
+      <div class='spacer20'></div>
+      <div class='text-center'>
+        <button class='btn btn-primary btn-lg' type='submit'>
+          JOIN THE BETA!
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
 
 
 
-    <div class="spacer100 bg-white"></div>
-<footer class="site-footer">
+    <footer class="site-footer">
   <p>
     Designed and built with <i class="fa fa-heart"></i> by <a href="https://www.algolia.com/?utm_medium=social-owned&utm_source=documentation+search&utm_campaign=homepage"><img src="/docsearch/img/logo-algolia-dark.png" alt="Algolia" height="20"></a>
   </p>
@@ -248,8 +281,6 @@
 
     <script src="//cdn.jsdelivr.net/jquery/2.1/jquery.min.js"></script>
     <script src="/docsearch/js/bootstrap.min.js"></script>
-    <script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
-    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 
 
 
@@ -316,6 +347,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
   <script src="/docsearch/js/home.js"></script>
+<script src="js/animation.js"></script>
+<script type="text/javascript">
+freezeframe_options = {
+animation_icon_image: false
+}
+</script>
+<script src="js/freezeframe.min.js"></script>
 
   </body>
 
