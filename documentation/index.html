@@ -82,11 +82,15 @@
   <article class="page-content">
     <h2 id="introduction">Introduction</h2>
 
-<p>We’re scratching our own itch here. As developers, we spend a lot of time reading documentation, and it isn’t always easy to find the information we need.</p>
+<p>We’re scratching our own itch here. As developers, we spend a lot of time
+reading documentation, and it isn’t always easy to find the information we need.</p>
 
-<p>Not blaming anyone here. Building a good search for a documentation is a complex challenge. We happen to have a lot of experience doing that, and we want to share it with the world. For free.</p>
+<p>Not blaming anyone here. Building a good search for a documentation is a complex
+challenge. We happen to have a lot of experience doing that, and we want to
+share it with the world. For free.</p>
 
-<p>Just submit the form on the <a href="https://community.algolia.com/docsearch/">website</a> and we’ll get back to you with what you need to integrate your new search into your website.</p>
+<p>Just submit the form on the <a href="https://community.algolia.com/docsearch/">website</a> and we’ll get back to you with what
+you need to integrate your new search into your website.</p>
 
 <ol>
   <li>We’ll crawl your documentation pages,</li>
@@ -96,7 +100,8 @@
 
 <h2 id="setup">Setup</h2>
 
-<p>Once we’ve crawled your documentation website we’ll send you the credentials you need to add the following code snippet to your website:</p>
+<p>Once we’ve crawled your documentation website we’ll send you the credentials you
+need to add the following code snippet to your website:</p>
 
 <div class="highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;link</span> <span style="color:#b48">rel</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">stylesheet</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
@@ -164,7 +169,78 @@ sets white and purples colors.</p>
 </div>
 </div>
 
-<p>Advanced users can also clone the repository, edit the <a href="https://github.com/algolia/docsearch/blob/master/src/styles/_variables.scss">_variables.scss</a> file and re-build the CSS file using <code>npm run build:css</code>.</p>
+<h3 id="advanced-styling">Advanced styling</h3>
+
+<p>If you want to do heavily change the way results are displayed, you might find
+it easier to directly edit the <code>scss</code> files in this repository.</p>
+
+<p><code>[_variables.scss][18]</code>
+contains all the color, breakpoints and size definitions while 
+<code>[_main.scss][19]</code>
+holds the structure of the display.</p>
+
+<p>You can regenerate the whole final <code>css</code> file from those <code>scss</code> files by running
+<code>npm run build:css</code>. The resulting files will be found in <code>./dist/cdn/</code>.</p>
+
+<p>All you have to do now is change the <code>link</code> tag that was loading the default
+styling from our CDN, to one that is loading your newly compiled file.</p>
+
+<h2 id="custom-options">Custom options</h2>
+
+<p>DocSearch is a wrapper around the <a href="https://github.com/algolia/autocomplete.js">autocomplete.js</a> library that gets its
+results from the Algolia API. As such, you can use any options provided by
+<a href="https://github.com/algolia/autocomplete.js">autocomplete.js</a> and by the Algolia API.</p>
+
+<h3 id="autocomplete-options">Autocomplete options</h3>
+
+<p>You can pass any options to the underlying <code>autocomplete</code> instance through
+the<code>autocompleteOptions</code> parameter. You will find all <code>autocomplete</code> options in
+its <a href="https://github.com/algolia/autocomplete.js#options">own documentation</a>.</p>
+
+<p>You can also listen to <code>autocomplete</code> events through the <code>.autocomplete</code>
+property of the <code>docsearch</code> instance.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span style="color:#080;font-weight:bold">var</span> search = docsearch({
+  <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">indexName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;INDEX_NAME&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">inputSelector</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;YOUR_INPUT_DOM_SELECTOR&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">autocompleteOptions</span>: {
+    <span style="color:#777">// See https://github.com/algolia/autocomplete.js#options</span>
+    <span style="color:#777">// For full list of options</span>
+    <span style="color:#606">debug</span>: <span style="color:#069">true</span>
+  }
+});
+
+<span style="color:#777">// See https://github.com/algolia/autocomplete.js#custom-events</span>
+<span style="color:#777">// For full list of events</span>
+search.autocomplete.on(<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">autocomplete:opened</span><span style="color:#710">'</span></span>, <span style="color:#080;font-weight:bold">function</span>(e) {
+  <span style="color:#777">// Do something when the dropdown menu is opened</span>
+});
+</pre></div>
+</div>
+</div>
+
+<h3 id="algolia-options">Algolia options</h3>
+
+<p>You can also pass any specific option to the Algolia API to change the way
+records are returned. You can pass any options to the Algolia API through
+the <code>algoliaOptions</code> parameter.</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre>docsearch({
+  <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">indexName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;INDEX_NAME&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">inputSelector</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;YOUR_INPUT_DOM_SELECTOR&gt;</span><span style="color:#710">'</span></span>,
+  <span style="color:#606">algoliaOptions</span>: {
+    <span style="color:#606">hitsPerPage</span>: <span style="color:#00D">10</span>
+  }
+});
+</pre></div>
+</div>
+</div>
+
+<p>You will find all Algolia API options in its <a href="https://www.algolia.com/doc/ruby#full-text-search-parameters">own documentation</a></p>
 
 
   </article>
