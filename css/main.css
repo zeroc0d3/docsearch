@@ -3695,19 +3695,40 @@ html, body {
 
 /* HEADER
 // ------------------------- */
-#logo-algolia img {
-  height: 24px;
-  top: -2px;
-  position: relative;
-  margin-right: 12px; }
+.logo-algolia {
+  position: absolute;
+  left: 72px;
+  top: 5px;
+  display: block;
+  line-height: 1; }
+  .logo-algolia img {
+    height: 18px;
+    position: relative;
+    margin-right: 12px; }
 
-#logo-community {
-  font-size: 1.6em;
+.logo-community {
   color: white;
-  margin-right: 8px; }
-  #logo-community img {
+  font-size: 1.8em;
+  font-weight: 100 !important;
+  margin-right: 8px;
+  position: relative;
+  top: 6px; }
+  .logo-community img {
+    position: relative;
+    top: -8px;
     height: 46px;
     width: 46px; }
+  .logo-community:hover, .logo-community:active, .logo-community:focus {
+    color: white; }
+
+.project-title {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  position: relative;
+  top: -4px; }
+  .project-title:hover, .project-title:active, .project-title:focus {
+    color: white; }
 
 .site-header {
   width: 100%; }
@@ -3725,7 +3746,7 @@ html, body {
       .site-header .navbar .navbar-header a:hover {
         text-decoration: none; }
     .site-header .navbar .navbar-nav > li {
-      padding: 14px 15px; }
+      padding: 14px 8px; }
     .site-header .navbar .navbar-nav > li > a {
       padding: 0 0 4px 0; }
     .site-header .navbar .navbar-nav > li.active > a {
@@ -3740,9 +3761,12 @@ html, body {
 // ------------------------- */
 .jumbotron {
   padding-top: 60px;
+  padding-bottom: 32px;
   background: #091724 url(../img/header-bg.jpg) no-repeat center center;
   background-size: cover;
   margin-bottom: 0; }
+  .jumbotron .join-form {
+    border-radius: 5px 5px 0 0; }
   .jumbotron .jumbotron-header {
     text-align: center;
     color: #FFF; }
@@ -3965,7 +3989,7 @@ pre {
 .sbx-custom {
   display: inline-block;
   position: relative;
-  width: 240px;
+  width: 190px;
   height: 36px;
   white-space: nowrap;
   box-sizing: border-box; }
@@ -4057,8 +4081,8 @@ pre {
     transform: none;
     opacity: 1; } }
 .site-header .navbar .navbar-nav > li.searchbar-wrapper {
-  padding-top: 0;
-  padding-bottom: 0; }
+  margin: 0;
+  padding: 0; }
 
 .algolia-autocomplete {
   display: inline !important; }

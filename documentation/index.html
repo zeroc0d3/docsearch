@@ -35,7 +35,7 @@
     <link rel="icon" href="/docsearch/img/favicon.png">
 
     <!-- Fonts -->
-    <link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Raleway:300,600" />
+    <link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Raleway:100,300,600" />
     <link rel="stylesheet" media="screen" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600" />
 
     <link rel="stylesheet" media="screen" href="/docsearch/css/main.css" />
@@ -48,12 +48,15 @@
   <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a id="logo-community" href="https://community.algolia.com/">
+        <a class="logo-community" href="https://community.algolia.com/">
           <img src="/docsearch/img/logo-community-sm.svg" alt="Algolia Community" />
           Community
         </a>
-        <a id="logo-algolia" href="/docsearch/">
+        <a class="logo-algolia" href="https://www.algolia.com">
           <img src="/docsearch/img/algolia-logo.svg" alt="Algolia" />
+        </a>
+        <a class="project-title" href="/docsearch/">
+          DocSearch
         </a>
       </div>
       <div class="navbar-collapse collapse">
@@ -72,7 +75,7 @@
 </svg>
 
 <form role="search" novalidate="novalidate" class="searchbox sbx-custom">
-    <input onkeyup="updateReset()" type="search" name="search" placeholder="Search in the documentation" autocomplete="off" required="required" class="sbx-custom__input">
+    <input onkeyup="updateReset()" type="search" name="search" placeholder="Search in the doc ..." autocomplete="off" required="required" class="sbx-custom__input">
     <button type="submit" class="sbx-custom__submit">
         <svg role="img" aria-label="Search">
             <title>Icon Search</title>
