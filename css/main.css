@@ -4118,13 +4118,11 @@ pre {
     display: block; }
 
 .algolia-docsearch-suggestion--highlight {
-  padding: 0;
   color: #40ADDC;
-  padding: 0 2px;
   background: rgba(64, 173, 220, 0.1); }
   .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
     color: inherit;
-    background: white; }
+    background: rgba(64, 173, 220, 0.2); }
 
 .aa-cursor .algolia-docsearch-suggestion--content {
   color: black; }
