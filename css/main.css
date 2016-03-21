@@ -3875,9 +3875,12 @@ html, body {
   #section_examples .showcase .example {
     width: 100%; }
 #section_examples .screen-wrapper {
-  position: relative; }
+  position: relative;
+  height: 201px;
+  overflow: hidden; }
   #section_examples .screen-wrapper .freezeframe-container {
-    border-radius: 3px; }
+    border-radius: 3px;
+    max-height: 100%; }
   #section_examples .screen-wrapper .screen-mask {
     position: absolute;
     top: 0;
