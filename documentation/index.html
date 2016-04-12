@@ -40,6 +40,8 @@
 
     <link rel="stylesheet" media="screen" href="/docsearch/css/main.css" />
     <link rel="stylesheet" media="screen" href="//cdn.jsdelivr.net/fontawesome/4.4.0/css/font-awesome.min.css" />
+
+    <script src="//cdn.jsdelivr.net/jquery/2.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -49,11 +51,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="logo-community" href="https://community.algolia.com/">
-          <img src="/docsearch/img/logo-community-sm.svg" alt="Algolia Community" />
-          Community
-        </a>
-        <a class="logo-algolia" href="https://www.algolia.com">
-          <img src="/docsearch/img/algolia-logo.svg" alt="Algolia" />
+          <img src="/docsearch/img/logo-community-inline-dark.svg" width="150px" alt="Algolia Community" />
         </a>
         <a class="project-title" href="/docsearch/">
           DocSearch
@@ -91,24 +89,33 @@
 </form>
 <!--Js: focus search input after reset-->
 <script type="text/javascript">
-    //<![CDATA[
-    document.querySelector('.searchbox [type="reset"]').addEventListener('click', function() {
-        document.querySelector('.aa-input').focus();
-        this.className += " hide";
-    });
 
+    $(function(){
+      $('.searchbox .aa-input').on('change', function() {
+          $('.aa-input').addClass('filled');
+      });
+
+      $('.searchbox .aa-input').on('blur', function() {
+        if ($(this).val().length === 0){
+          $(this).removeClass('filled');
+        }
+      });
+
+      $('.searchbox [type="reset"]').on('click', function() {
+          myDocSearch.autocomplete.autocomplete.setVal('');
+          $('.aa-input').focus();
+          $(this).addClass("hide");
+      });
+    });
     function updateReset() {
-      var searchbox = document.querySelector('.aa-input');
-      var reset = document.querySelector('.searchbox [type="reset"]');
-      reset.className = "";
-      reset.className = "sbx-custom__reset";
-      if (searchbox.value.length === 0){
-        reset.className += " hide";
+      var searchbox = $('.aa-input');
+      var reset = $('.searchbox [type="reset"]');
+      reset.removeClass("hide");
+      if (searchbox.val().length === 0){
+        reset.addClass("hide");
       }
     }
 
-
-    //]]>
 </script>
 
               </div>
@@ -343,14 +350,13 @@ the <code>algoliaOptions</code> parameter.</p>
 
 
 
-    <script src="//cdn.jsdelivr.net/jquery/2.1/jquery.min.js"></script>
     <script src="/docsearch/js/bootstrap.min.js"></script>
 
 
 
     <script type="text/javascript" src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
     <script type="text/javascript">
-      docsearch({
+      var myDocSearch = docsearch({
         apiKey: '25626fae796133dc1e734c6bcaaeac3c',
         indexName: 'docsearch',
         inputSelector: '.sbx-custom__input',
