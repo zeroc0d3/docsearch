@@ -3677,6 +3677,8 @@ sub {
 .bg-white {
   background-color: white; }
 
+/* HEADER
+// ------------------------- */
 .site-header {
   width: 100%; }
   .site-header .navbar {
@@ -3707,6 +3709,28 @@ sub {
       font-size: 1.6em;
       position: relative;
       top: -2px; }
+  .site-header .logo-community {
+    color: white;
+    font-size: 26px;
+    font-weight: 100 !important;
+    margin-right: 12px;
+    border-right: #FF2E6C 2px solid;
+    padding-left: 8px; }
+    .site-header .logo-community img {
+      position: relative;
+      top: -3px;
+      width: 200px;
+      margin-right: 6px; }
+    .site-header .logo-community:hover, .site-header .logo-community:active, .site-header .logo-community:focus {
+      color: white; }
+  .site-header .project-title {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: -4px; }
+    .site-header .project-title:hover, .site-header .project-title:active, .site-header .project-title:focus {
+      color: white; }
 
 * {
   z-index: 1; }
@@ -3723,32 +3747,6 @@ sub {
 html, body {
   position: relative;
   font-family: "Raleway", Helvetica, Arial, sans-serif; }
-
-/* HEADER
-// ------------------------- */
-.logo-community {
-  color: white;
-  font-size: 26px;
-  font-weight: 100 !important;
-  margin-right: 12px;
-  border-right: #FF2E6C 2px solid;
-  padding-left: 8px; }
-  .logo-community img {
-    position: relative;
-    top: -3px;
-    width: 200px;
-    margin-right: 6px; }
-  .logo-community:hover, .logo-community:active, .logo-community:focus {
-    color: white; }
-
-.project-title {
-  color: white;
-  font-size: 1.2em;
-  font-weight: bold;
-  position: relative;
-  top: -4px; }
-  .project-title:hover, .project-title:active, .project-title:focus {
-    color: white; }
 
 /* JUMBOTRON
 // ------------------------- */
