@@ -3677,6 +3677,37 @@ sub {
 .bg-white {
   background-color: white; }
 
+.site-header {
+  width: 100%; }
+  .site-header .navbar {
+    border-radius: 0;
+    border: none;
+    background-color: #0B1724;
+    height: 50px; }
+    .site-header .navbar .navbar-header {
+      position: relative;
+      height: 50px;
+      font-size: 14px;
+      line-height: 50px;
+      color: #C7C4C3; }
+      .site-header .navbar .navbar-header a:hover {
+        text-decoration: none; }
+    .site-header .navbar .navbar-nav > li {
+      padding: 14px;
+      font-size: 14px;
+      font-family: Open Sans; }
+      .site-header .navbar .navbar-nav > li:last-child {
+        padding-right: 40px; }
+    .site-header .navbar .navbar-nav > li > a {
+      padding: 0 0 4px 0; }
+    .site-header .navbar .navbar-nav > li.active > a {
+      background-color: transparent;
+      border-bottom: 2px solid #FF2E6C; }
+    .site-header .navbar .fa-github {
+      font-size: 1.6em;
+      position: relative;
+      top: -2px; }
+
 * {
   z-index: 1; }
 
@@ -3719,35 +3750,6 @@ html, body {
   .project-title:hover, .project-title:active, .project-title:focus {
     color: white; }
 
-.site-header {
-  width: 100%; }
-  .site-header .navbar {
-    border-radius: 0;
-    border: none;
-    background-color: #0B1724;
-    height: 50px; }
-    .site-header .navbar .navbar-header {
-      position: relative;
-      height: 50px;
-      font-size: 14px;
-      line-height: 50px;
-      color: #C7C4C3; }
-      .site-header .navbar .navbar-header a:hover {
-        text-decoration: none; }
-    .site-header .navbar .navbar-nav > li {
-      padding: 14px; }
-      .site-header .navbar .navbar-nav > li:last-child {
-        padding-right: 20px; }
-    .site-header .navbar .navbar-nav > li > a {
-      padding: 0 0 4px 0; }
-    .site-header .navbar .navbar-nav > li.active > a {
-      background-color: transparent;
-      border-bottom: 2px solid #FF2E6C; }
-    .site-header .navbar .fa-github {
-      font-size: 1.6em;
-      position: relative;
-      top: -2px; }
-
 /* JUMBOTRON
 // ------------------------- */
 .jumbotron {
@@ -3762,7 +3764,9 @@ html, body {
     border-radius: 5px 5px 0 0; }
   .jumbotron .jumbotron-header {
     text-align: center;
-    color: #FFF; }
+    color: white; }
+    .jumbotron .jumbotron-header .jumbotron-title {
+      font-size: 0px; }
   .jumbotron .jumbotron-left-column {
     display: none;
     padding-top: 100px;
@@ -3821,7 +3825,7 @@ html, body {
 @media (min-width: 1200px) {
   .jumbotron .join-form {
     position: absolute;
-    top: 170px;
+    top: 140px;
     right: 120px;
     padding: 10px 40px 30px; } }
 /* PAGE SECTIONS
@@ -4001,7 +4005,7 @@ pre {
     background: #091724;
     padding: 0;
     height: 100%;
-    width: 38px;
+    width: 36px;
     vertical-align: middle;
     white-space: normal;
     font-size: 13px;
