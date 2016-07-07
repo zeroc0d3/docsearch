@@ -53,7 +53,7 @@
         <img alt='Algolia Community' class='ac-logo__sm' src='https://res.cloudinary.com/hilnmyskv/image/upload/v1461180081/logo-community-sm.svg'>
       </a>
       <span class='ac-nav-brand-breadcrumb'></span>
-      <a class='ac-nav-brand-title' href='./' title='Home'>DocSearch</a>
+      <a class='ac-nav-brand-title' href='/docsearch/' title='Home'>DocSearch</a>
     </div>
     <div class='ac-nav-menu'>
       <div class='ac-nav-searchbox'>
@@ -156,14 +156,16 @@ you need to integrate your new search into your website.</p>
   <li>You’ll need to add a bit of JavaScript and CSS code to your website.</li>
 </ol>
 
+<p>If you prefer to DIY, you can run the <a href="https://github.com/algolia/docsearch-scraper">scraper</a> in your own infra.</p>
+
 <h2 id="setup">Setup</h2>
 
 <p>Once we’ve crawled your documentation website we’ll send you the credentials you
 need to add the following code snippet to your website:</p>
 
 <div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;link</span> <span style="color:#b48">rel</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">stylesheet</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
-<span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
+  <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;link</span> <span style="color:#b48">rel</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">stylesheet</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
+<span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
 <span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
 <span style="background-color:hsla(0,0%,0%,0.07);color:black">docsearch({
   <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
@@ -177,9 +179,9 @@ need to add the following code snippet to your website:</p>
 
 <h2 id="customization">Customization</h2>
 
-<p>The default colorscheme is blue and gray:</p>
+<p>The default colorscheme is white and gray:</p>
 
-<p><img src="https://community.algolia.com/docsearch/img/default-colorscheme.png" alt="Default colorscheme" /></p>
+<p><img src="./docs/img/default-colorscheme.png" alt="Default colorscheme" /></p>
 
 <p>To update the colors to suit your website, you just need to override a few
 colors. Here is an example of a CSS file that you can use as a basis and that
@@ -363,7 +365,7 @@ the <code>algoliaOptions</code> parameter.</p>
 
 
 
-    <script type="text/javascript" src="//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
     <script type="text/javascript">
       var myDocSearch = docsearch({
         apiKey: '25626fae796133dc1e734c6bcaaeac3c',
