@@ -1,11 +1,14 @@
 import {join} from 'path';
 
 export default {
-  entry: './dev/app.js',
+  entry: {
+    app: './dev/app.js',
+    appMulti: './dev/app-multi.js'
+  },
   devtool: 'source-map',
   output: {
     path: './dev/',
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     loaders: [{

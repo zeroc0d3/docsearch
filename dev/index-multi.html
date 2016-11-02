@@ -6,6 +6,24 @@
   <title>Documentation</title>
   <link rel="stylesheet" type="text/css" href="/stripe.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="/docsearch.css" media="screen" />
+  <style>
+    .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
+      min-width: 956px;
+      max-width: 956px;
+      right: -295px !important;
+      background: white;
+      border: 1px solid #ddd;
+    }
+    .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu:before {
+      display: none !important;
+    }
+    .ds-dropdown-menu [class^="ds-dataset-"] {
+      border: 0 !important;
+      display: inline-block;
+      width: 50%;
+      vertical-align: top;
+    }
+  </style>
   <link rel="shortcut icon" href="favicon.ico">
 </head>
 
@@ -220,7 +238,7 @@
   </div>
   <div class="country-dropdown-overlay"></div>
 
-  <script src="/app.bundle.js"></script>
+  <script src="/appMulti.bundle.js"></script>
 </body>
 
 </html>

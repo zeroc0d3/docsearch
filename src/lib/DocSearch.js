@@ -33,6 +33,7 @@ class DocSearch {
     apiKey,
     indexName,
     inputSelector,
+    multiQuery,
     appId = 'BH4D9OD16A',
     debug = false,
     algoliaOptions = {},
@@ -47,11 +48,12 @@ class DocSearch {
     layout = 'collumns'
   }) {
     DocSearch.checkArguments({apiKey, indexName, inputSelector, debug, algoliaOptions,
-      autocompleteOptions, transformData, handleSelected, enhancedSearchInput, layout});
+      autocompleteOptions, transformData, handleSelected, enhancedSearchInput, layout, multiQuery});
 
     this.apiKey = apiKey;
     this.appId = appId;
     this.indexName = indexName;
+    this.multiQuery = multiQuery;
     this.input = DocSearch.getInputFromSelector(inputSelector);
     this.algoliaOptions = {hitsPerPage: 5, ...algoliaOptions};
     const autocompleteOptionsDebug = autocompleteOptions && autocompleteOptions.debug ?
@@ -66,21 +68,48 @@ class DocSearch {
 
     this.isSimpleLayout = (layout === 'simple');
 
-    this.client = algoliasearch(this.appId, this.apiKey);
-    this.client.addAlgoliaAgent('docsearch.js ' + version);
-
     if (enhancedSearchInput) {
       this.input = DocSearch.injectSearchBox(this.input);
     }
 
-    this.autocomplete = autocomplete(this.input, autocompleteOptions, [{
-      source: this.getAutocompleteSource(transformData),
-      templates: {
-        suggestion: DocSearch.getSuggestionTemplate(this.isSimpleLayout),
-        footer: templates.footer,
-        empty: DocSearch.getEmptyTemplate()
-      }
-    }]);
+    if (this.multiQuery) {
+
+      let sources = this.multiQuery.map((config, index) => {
+        let client = algoliasearch(config.appId, config.apiKey);
+        client.addAlgoliaAgent('docsearch.js ' + version);
+        let source = this.getAutocompleteSource(client, config.indexName, this.algoliaOptions, transformData);
+        return {
+          source: source,
+          displayKey: config.key,
+          name: config.key,
+          templates: {
+            suggestion: DocSearch.getSuggestionTemplate(this.isSimpleLayout),
+            footer: index === this.multiQuery.length - 1 ? templates.footer : "",
+            empty: DocSearch.getEmptyTemplate()
+          }
+        }
+      })
+
+      let dropdownMenu = this.multiQuery.map((config) => {
+        return "<div class='aa-dataset-${config.key}'></div>";
+      })
+      autocompleteOptions.dropdownMenu = dropdownMenu;
+      this.autocomplete = autocomplete(this.input, autocompleteOptions, sources);
+
+    } else {
+
+      this.client = algoliasearch(this.appId, this.apiKey);
+      this.client.addAlgoliaAgent('docsearch.js ' + version);
+      this.autocomplete = autocomplete(this.input, autocompleteOptions, [{
+        source: this.getAutocompleteSource(this.client, this.indexName, this.algoliaOptions, transformData),
+        templates: {
+          suggestion: DocSearch.getSuggestionTemplate(this.isSimpleLayout),
+          footer: templates.footer,
+          empty: DocSearch.getEmptyTemplate()
+        }
+      }]);
+
+    }
     this.autocomplete.on(
       'autocomplete:selected',
       handleSelected.bind(null, this.autocomplete.autocomplete)
@@ -102,6 +131,10 @@ class DocSearch {
    * @returns {void}
    */
   static checkArguments(args) {
+    if (args.multiQuery) {
+      return
+    }
+
     if (!args.apiKey || !args.indexName) {
       throw new Error(usage);
     }
@@ -156,12 +189,12 @@ class DocSearch {
    * @returns {function} Method to be passed as the `source` option of
    * autocomplete
    */
-  getAutocompleteSource(transformData) {
+  getAutocompleteSource(client, indexName, params, transformData) {
     return (query, callback) => {
-      this.client.search([{
-        indexName: this.indexName,
+      client.search([{
+        indexName: indexName,
         query: query,
-        params: this.algoliaOptions
+        params: params
       }]).then((data) => {
         let hits = data.results[0].hits;
         if (transformData) {
@@ -288,5 +321,3 @@ class DocSearch {
 }
 
 export default DocSearch;
-
-

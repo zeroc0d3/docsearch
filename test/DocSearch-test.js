@@ -310,6 +310,8 @@ describe('DocSearch', () => {
 
   describe('getAutocompleteSource', () => {
     let client;
+    let params = {hitsPerPage: 5};
+    let indexName = 'indexName';
     let AlgoliaSearch;
     let docsearch;
     beforeEach(() => {
@@ -324,7 +326,7 @@ describe('DocSearch', () => {
       DocSearch.__Rewire__('algoliasearch', AlgoliaSearch);
 
       docsearch = new DocSearch({
-        indexName: 'indexName',
+        indexName: indexName,
         apiKey: 'apiKey',
         inputSelector: '#input'
       });
@@ -336,7 +338,7 @@ describe('DocSearch', () => {
 
     it('returns a function', () => {
       // Given
-      let actual = docsearch.getAutocompleteSource();
+      let actual = docsearch.getAutocompleteSource(client, indexName, params);
 
       // When
 
@@ -347,7 +349,7 @@ describe('DocSearch', () => {
     describe('the returned function', () => {
       it('calls the Agolia client with the correct parameters', () => {
         // Given
-        let actual = docsearch.getAutocompleteSource();
+        let actual = docsearch.getAutocompleteSource(client, indexName, params);
 
         // When
         actual('query');
