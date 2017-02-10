@@ -4177,23 +4177,29 @@ html, body {
   #section_examples a:hover {
     color: #46AEDA;
     text-decoration: none; }
+#section_examples .img-container {
+  height: 55px; }
 #section_examples .showcase {
   margin-top: 40px;
   text-align: center; }
   #section_examples .showcase .logo {
     display: inline-block;
-    height: 60px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    max-width: 90px;
+    max-height: 40px; }
   #section_examples .showcase .example {
     width: 100%; }
 #section_examples .screen-wrapper {
   position: relative;
-  height: 201px;
   overflow: hidden; }
+  #section_examples .screen-wrapper figure {
+    height: 0;
+    padding-bottom: 60%;
+    background-repeat: no-repeat; }
   #section_examples .screen-wrapper .freezeframe-container {
-    border-radius: 3px;
-    max-height: 100%; }
+    border-radius: 3px; }
   #section_examples .screen-wrapper .screen-mask {
+    width: 100%;
     position: absolute;
     top: 0;
     pointer-events: none; }
