@@ -136,6 +136,3 @@ DEPENDENCIES
   nokogiri
   rouge
   sass
-
-BUNDLED WITH
-   1.14.4
