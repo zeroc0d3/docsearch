@@ -163,7 +163,7 @@ you need to integrate your new search into your website.</p>
 <p>Once we’ve crawled your documentation website we’ll send you the credentials you
 need to add the following code snippet to your website:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-html highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#070;font-weight:bold">&lt;link</span> <span style="color:#b48">rel</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">stylesheet</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">href</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css</span><span style="color:#710">&quot;</span></span> <span style="color:#070;font-weight:bold">/&gt;</span>
 <span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span> <span style="color:#b48">src</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span><span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
 <span style="color:#070;font-weight:bold">&lt;script</span> <span style="color:#b48">type</span>=<span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">&quot;</span><span style="color:#D20">text/javascript</span><span style="color:#710">&quot;</span></span><span style="color:#070;font-weight:bold">&gt;</span>
@@ -173,14 +173,6 @@ need to add the following code snippet to your website:</p>
   <span style="color:#606">inputSelector</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;YOUR_INPUT_DOM_SELECTOR&gt;</span><span style="color:#710">'</span></span>
 });</span>
 <span style="color:#070;font-weight:bold">&lt;/script&gt;</span>
-</pre></div>
-</div>
-</div>
-
-<p>You can also install docsearch via <code>npm</code>:</p>
-
-<div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre>npm install --save docsearch.js
 </pre></div>
 </div>
 </div>
@@ -195,7 +187,7 @@ need to add the following code snippet to your website:</p>
 colors. Here is an example of a CSS file that you can use as a basis and that
 sets white and purples colors.</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-css highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#777">/* Bottom border of each suggestion */</span>
 <span style="color:#B06;font-weight:bold">.algolia-docsearch-suggestion</span> {
   <span style="color:#606">border-bottom-color</span>: <span style="color:#0A0">#3A3DD1</span>;
@@ -268,7 +260,7 @@ its <a href="https://github.com/algolia/autocomplete.js#options">own documentati
 <p>You can also listen to <code>autocomplete</code> events through the <code>.autocomplete</code>
 property of the <code>docsearch</code> instance.</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-javascript highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">var</span> search = docsearch({
   <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
   <span style="color:#606">indexName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;INDEX_NAME&gt;</span><span style="color:#710">'</span></span>,
@@ -292,7 +284,7 @@ search.autocomplete.on(<span style="background-color:hsla(0,100%,50%,0.05)"><spa
 <p>We already bind the autocomplete:selected event inside the docsearch.
 If you want to replace the default behavior you can pass the handleSelected option</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-javascript highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre><span style="color:#080;font-weight:bold">var</span> search = docsearch({
   <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
   <span style="color:#606">indexName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;INDEX_NAME&gt;</span><span style="color:#710">'</span></span>,
@@ -310,7 +302,7 @@ If you want to replace the default behavior you can pass the handleSelected opti
 records are returned. You can pass any options to the Algolia API through
 the <code>algoliaOptions</code> parameter.</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
+<div class="language-javascript highlighter-coderay"><div class="CodeRay">
   <div class="code"><pre>docsearch({
   <span style="color:#606">apiKey</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;API_KEY&gt;</span><span style="color:#710">'</span></span>,
   <span style="color:#606">indexName</span>: <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">&lt;INDEX_NAME&gt;</span><span style="color:#710">'</span></span>,
