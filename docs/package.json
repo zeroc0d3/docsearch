@@ -1,0 +1,10 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "algolia-components": "git+ssh://git@github.com/algolia/algolia-components.git"
+  }
+}

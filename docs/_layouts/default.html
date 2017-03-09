@@ -54,26 +54,22 @@
 {% endif %}
 
     <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/responsiveNavigation.js" | prepend: site.baseurl }}"></script>
-
+    <script src="{{ "/js/communityHeader.js" | prepend: site.baseurl }}"></script>
+    <script>
+        communityHeader({
+            apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+            indexName: 'docsearch',
+            inputSelector: '#searchbox',
+            autocompleteOptions: {
+              debug: false
+            }
+        },"lazy");
+    </script>
 {% if site.env == 'development' %}
     <script>
       document.write('\x3Cscript src="//' + window.location.hostname +':35731/livereload.js">\x3C/script>');
     </script>
 {% endif %}
-
-    <script type="text/javascript" src="//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-    <script type="text/javascript">
-      var myDocSearch = docsearch({
-        apiKey: '25626fae796133dc1e734c6bcaaeac3c',
-        indexName: 'docsearch',
-        inputSelector: '.searchbox__input',
-        autocompleteOptions: {
-          debug: false
-        }
-      });
-    </script>
-
 
   {% include marketing.html %}
 

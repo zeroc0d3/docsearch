@@ -3,6 +3,7 @@
 set -ev # exit when error
 
 cd docs && \
+node buildComponents.js && \
 bundle install && \
 bundle exec guard -i & \
 npm run dev & \

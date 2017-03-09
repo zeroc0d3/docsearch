@@ -9,10 +9,13 @@
 @import "syntax-highlighting";
 @import "helper";
 
-@import "header";
 @import "footer";
 
 @import "home";
 @import "page";
-@import "searchbar";
 @import "docsearch";
+@import "./../node_modules/algolia-components/components/communityHeader/communityHeader";
+
+.algc-menu__search--holder.open #searchbox {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
