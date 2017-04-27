@@ -4079,9 +4079,6 @@ html, body {
     max-width: 100%; }
   .jumbotron .join-form {
     border-radius: 5px 5px 0 0; }
-  .jumbotron .join-form.join-form-validated {
-    display: none;
-    border-radius: 5px; }
   .jumbotron .jumbotron-header {
     text-align: center;
     color: white; }
@@ -4112,6 +4109,9 @@ html, body {
   border-radius: 6px;
   color: #FFF;
   max-width: 90%; }
+  .join-form.join-form-validated {
+    display: none;
+    border-radius: 5px; }
   .join-form h3 {
     font-size: 22px;
     text-align: center;
