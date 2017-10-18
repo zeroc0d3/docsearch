@@ -57,7 +57,7 @@ algolia-aerial@1.1.6:
     style-loader "^0.18.2"
     url-loader "^0.5.9"
 
-algolia-frontend-components@^0.0.34:
+algolia-frontend-components@0.0.34:
   version "0.0.34"
   resolved "https://registry.yarnpkg.com/algolia-frontend-components/-/algolia-frontend-components-0.0.34.tgz#f719dd54617704279b3433a5061f14c95b4fcfab"
   dependencies:
