@@ -2694,10 +2694,11 @@ sub {
 h1, h2, h3, h4 {
   font-family: "Montserrat", Helvetica, Arial, sans-serif; }
 
+/*! The paragraphs also use Montserrat on the website, except on the documentation and other exceptions */
 p {
   font-size: 15px;
   line-height: 1.6;
-  font-family: "Open Sans", helvetica, sans-serif; }
+  font-family: "Montserrat", Helvetica, Arial, sans-serif; }
 
 strong {
   font-family: "Montserrat", Helvetica, Arial, sans-serif; }
