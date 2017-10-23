@@ -2084,19 +2084,6 @@ hr {
 
 .card-border {
   height: 100%; }
-  .card-border:before {
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    position: absolute;
-    box-shadow: 0 5px 15px rgba(112, 128, 175, 0.2);
-    opacity: 0;
-    transition: all 240ms ease-in-out;
-    border-radius: 6px; }
-  .card-border.active:before, .card-border.active:after {
-    opacity: 1; }
 
 .card-border-media {
   overflow: hidden;
