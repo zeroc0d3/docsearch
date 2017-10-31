@@ -3463,10 +3463,17 @@ p.text-bolder {
 
 .flex-dir-col {
   flex-flow: column wrap; }
+  .flex-dir-col-reverse {
+    flex-flow: column-reverse wrap; }
 
 .flex-dir-row {
   flex-flow: row wrap; }
+  .flex-dir-row-reverse {
+    flex-flow: row-reverse wrap; }
 
+/**
+ * Flex space setting
+ */
 .flex-space-around {
   justify-content: space-around; }
 
@@ -3476,6 +3483,9 @@ p.text-bolder {
 .flex-align-center {
   align-items: center; }
 
+/**
+ * Flex item size
+ */
 .flex-it-4 {
   flex: 0 1 25%; }
 
@@ -3483,7 +3493,7 @@ _:-ms-input-placeholder, :root .flex-it-4 {
   -ms-flex-preferred-size: 21% !important; }
 
 .flex-it-3 {
-  flex: 0 1 33%; }
+  flex: 0 1 33.33%; }
 
 _:-ms-input-placeholder, :root .flex-it-3 {
   -ms-flex-preferred-size: 29% !important; }
@@ -3500,6 +3510,54 @@ _:-ms-input-placeholder, :root .flex-it-2 {
 .flex-it-1 {
   flex: 0 1 100%; }
 
+@media (min-width: 1200px) {
+  .flex-it-1-lg {
+    flex: 0 1 100%; }
+
+  .flex-it-2-lg {
+    flex: 0 1 50%; }
+
+  _:-ms-input-placeholder, :root .flex-it-2-lg {
+    -ms-flex-preferred-size: 48% !important; }
+    @supports not (mix-blend-mode: luminosity) {
+      _:-ms-input-placeholder, :root .flex-it-2-lg {
+        flex: 0 1 49.95%; } }
+
+  .flex-it-3-lg {
+    flex: 0 1 33.33%; }
+
+  _:-ms-input-placeholder, :root .flex-it-3-lg {
+    -ms-flex-preferred-size: 29% !important; }
+
+  .flex-it-4-lg {
+    flex: 0 1 25%; }
+
+  _:-ms-input-placeholder, :root .flex-it-4-lg {
+    -ms-flex-preferred-size: 21% !important; } }
+@media (max-width: 768px) {
+  .flex-it-1-sm {
+    flex: 0 1 100%; }
+
+  .flex-it-2-sm {
+    flex: 0 1 50%; }
+
+  _:-ms-input-placeholder, :root .flex-it-2-sm {
+    -ms-flex-preferred-size: 48% !important; }
+    @supports not (mix-blend-mode: luminosity) {
+      _:-ms-input-placeholder, :root .flex-it-2-sm {
+        flex: 0 1 49.95%; } }
+
+  .flex-it-3-sm {
+    flex: 0 1 33.33%; }
+
+  _:-ms-input-placeholder, :root .flex-it-3-sm {
+    -ms-flex-preferred-size: 29% !important; }
+
+  .flex-it-4-sm {
+    flex: 0 1 25%; }
+
+  _:-ms-input-placeholder, :root .flex-it-4-sm {
+    -ms-flex-preferred-size: 21% !important; } }
 /**
  * others
  */
