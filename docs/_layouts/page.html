@@ -1,12 +1,26 @@
 ---
 layout: default
 ---
-
-<div class="container main-content m800 m-l-r-auto {{page.className}}">
-  <header class="page-header">
+<aside class="pos-fix w100p m300 hfull fill-white p-t-large b-r fill-athens-gray p-l-xlarge">
+	<h3 class="">DocSearch</h3>
+	<ul class="list-none no-margin no-padding">
+		<li><a href="{{site.baseurl}}/documentation#introduction​">Introduction​</a></li>
+	</ul>
+	<h3 class="">Scraper</h3>
+	<ul class="list-none no-margin no-padding">
+		<li><a href="https://raw.githubusercontent.com/algolia/docsearch-scraper/master/README.md">Overview</a></li>
+		<li><a href="https://raw.githubusercontent.com/algolia/docsearch-configs/master/README.md">Parameters</a></li>
+	</ul>
+	<h3 class="">Docsearch Autocomplete</h3>
+	<ul class="list-none no-margin no-padding">
+		<li><a href="https://github.com/algolia/docsearch/blob/master/README.md">Overview</a></li>
+	</ul>
+</aside>
+<div class="container main-content w100p {{page.className}}">
+  <header class="page-header m1200 m-l-r-auto">
     <h1 class="page-title">{{ page.title }}</h1>
   </header>
-  <article class="page-content">
+  <article class="page-content m1200 m-l-r-auto">
     {{ content }}
   </article>
   <div class="spacer80"></div>

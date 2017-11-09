@@ -79,6 +79,8 @@ function setScreen() {
   imageHolder.appendChild(screenImage);
 }
 
+
+
 window.addEventListener('load', function() {
   setScreen();
   document.body.classList.add('ready');

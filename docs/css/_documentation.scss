@@ -1,7 +1,23 @@
 .documentation {
+
+  .main-content {
+    width: calc(100% - 300px);
+    position: relative;
+    margin-left: 300px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
   p, ul li, ol li {
     font-size: 15px;
-    color: $east-bay
+    color: $east-bay;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   ol li {
