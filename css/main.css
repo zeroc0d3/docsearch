@@ -699,6 +699,7 @@
   height: 33px;
   margin-right: 16px; }
 
+/*! Aerial.css [AIV]v{version} - {date}[/AIV] */
 * {
   box-sizing: border-box; }
 
@@ -3025,6 +3026,9 @@ input[type="search"] {
 
 .pos-abt {
   position: absolute; }
+
+.pos-fix {
+  position: fixed; }
 
 /**
  * Indexing
