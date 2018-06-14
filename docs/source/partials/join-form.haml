@@ -16,6 +16,14 @@
     %input.form-control{type: 'email', placeholder: 'you@example.org', name: 'email'}
   %p.text-sm.color-east-bay.m-t-small We’ll email you the code you need to integrate the search into your documentation.
   .spacer32
+   %label.color-bunting.text-normal{:for => "open_source_policy"} URL to your open source policy
+  .input-group
+    %span.input-group-addon
+      %i.icon.icon-link.color-bunting
+    %input.form-control{type: 'text', placeholder: 'https://github.com/algolia/docsearch/', name: 'open_source_policy'}
+  %p.text-sm.color-east-bay.m-t-small Refer to
+    %a{href: "https://community.algolia.com/docsearch/documentation/docsearch-FAQ/customize-configuration-file/", class:"clickable"} our policy regarding project we help
+  .spacer32
   %p.checkbox.text-center
     %label
       %input{type: 'checkbox', name: 'owner'}
